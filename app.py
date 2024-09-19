@@ -1,5 +1,5 @@
 import streamlit as st
-
+from utils import *
 
 # Creating Session state variable
 if 'HuggingFace_API_Key' not in st.seesion_state:
@@ -26,6 +26,7 @@ if load_button:
   if st.session_state['HuggingFace_API_Key'] !="" and st.seesion_state['Pinecone_API_Key']!="":
     
     #Fetch data from site
+    site_data=get_website_data("https://jobs.excelcult.com/wp-sitemap-posts-post-1.xml")
     st.write("Data pull done...")
     
     #Split data into chunks
