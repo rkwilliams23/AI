@@ -39,7 +39,7 @@ def create_embedding():
   return embeddings
 
 #Function to push data to Pinecone
-def push_to_pinecone(pinecone_apikey,pinecone_environment,pinecone_index_name,embeddeing,docs):
+def push_to_pinecone(pinecone_apikey,pinecone_environment,pinecone_index_name,embedding,docs):
   
   pinecone.init(
     api_key=pinecone_apikey,
