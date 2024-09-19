@@ -30,6 +30,7 @@ if load_button:
     st.write("Data pull done...")
     
     #Split data into chunks
+    chunks_data=split_data(site_data)
     st.write("Spliting data done...")
     
     #Creating embeddings instance
